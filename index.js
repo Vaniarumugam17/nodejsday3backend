@@ -17,13 +17,20 @@ const URL = process.env.MONGODB_URL;
 
 const mongoose = require("mongoose");
 
-mongoose.connect(URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-});
-const connection = mongoose.connection;
-connection.on("open", () => console.log("MongoDB Connected"));
+// Define connection URI
+const uri = "mongodb://localhost:27017/mydatabase";
+
+// Connect to MongoDB
+mongoose
+  .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    console.log("Connected to MongoDB");
+    // Start your application logic here
+  })
+  .catch((error) => {
+    console.error("Error connecting to MongoDB:", error);
+  });
+
 
 app.get("/", (req, res) =>
   res.send(`
