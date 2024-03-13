@@ -43,7 +43,7 @@ app.get("/", (req, res) =>
 <p>To get mentor based on ID - https://nodejsday3backendnew.onrender.com/Mentors/get-mentor/:id<p>
 <p>sample - https://nodejsday3backendnew.onrender.com/Mentors/get-mentor/60e7f515d5ff5342a06652e3 </p>
 
-<p> To test Post and update - visit Frontend page of the application - https://preethi-st.github.io/ZEN-Mentors-Frontend/ </p>
+<p> To test Post and update - visit Frontend page of the application - https://github.com/Vaniarumugam17/nodejsday2frontend.git/ </p>
 </div>
 `)
 );
